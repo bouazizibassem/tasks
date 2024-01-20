@@ -15,6 +15,12 @@ export class SprintService {
   getAllSprint(){
     return this.http.get('http://localhost:8081/SpringMVC/Sprint/sprints')
   }
+  patchCorbeilSprint(data:any){
+    return this.http.put('http://localhost:8081/SpringMVC/Sprint/updateSprint',data)
+  }
+  patchCorbeilSprintO(data:any){
+    return this.http.put('http://localhost:8081/SpringMVC/Sprint/updateSprintC',data)
+  }
 
   deleteSprint(id : any){
     var obj = {

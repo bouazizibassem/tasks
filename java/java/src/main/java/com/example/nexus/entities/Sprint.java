@@ -21,6 +21,7 @@ public class Sprint {
     private  Date datefin;
     private String nomSprint;
     private  boolean etatSprint;
+    private  boolean corbeil;
     @Enumerated(EnumType.STRING)
     private  SprintEnum status;
 

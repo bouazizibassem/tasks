@@ -28,12 +28,21 @@ public class SprintService  implements ISprint {
 
     @Override
     public List<Sprint> getAllSprint() {
+
         return sprintRepo.findAll();
     }
 
     @Override
     public void update(Sprint E) {
-        sprintRepo.save(E);
+       Sprint SS = sprintRepo.findById(E.getIdSprint()) .orElse(null);
+       SS.setCorbeil(true);
+        sprintRepo.save(SS);
+    }
+    @Override
+    public void updateC(Sprint E) {
+        Sprint SS = sprintRepo.findById(E.getIdSprint()) .orElse(null);
+        SS.setCorbeil(false);
+        sprintRepo.save(SS);
     }
     @Override
     public void delete(int  idSprint) {

@@ -9,5 +9,6 @@ public interface ISprint {
     public List<Sprint> getAllSprint();
 
     public void update (Sprint E);
+    public void updateC (Sprint E);
     public void delete (int id);
 }

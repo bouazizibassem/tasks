@@ -37,6 +37,11 @@ public class SprintController {
     public void updatesprint(@RequestBody Sprint R){
         sprintService.update(R);
     }
+    @PutMapping("/updateSprintC")
+    @ResponseBody
+    public void updatesprintC(@RequestBody Sprint R){
+        sprintService.updateC(R);
+    }
 
     @PostMapping("/deleteSprint/{idSprint}")
     @ResponseBody
