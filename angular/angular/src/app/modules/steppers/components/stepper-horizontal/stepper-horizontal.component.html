@@ -1,0 +1,52 @@
+<div class="div-main">
+    <div class="title-page">
+        <h2>Stepper Horizontal </h2>
+    </div>
+
+
+    <div class="row d-flex justify-content-center py-4 custom-linear-stepper  custom-stepper">
+        <h3 style="color: #4780ff; font-weight: bold; padding-left: 1rem;">Linear stepper</h3>
+        <div class="col-10">
+            <!-- Start linear stepper -->
+            <mat-stepper labelPosition="bottom" #stepper>
+              <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                  <ng-template matStepLabel>Fill out your name</ng-template>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                  </mat-form-field>
+                  <div>
+                    <button mat-button matStepperNext class="btn-stepper">Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="secondFormGroup" optional>
+                <form [formGroup]="secondFormGroup">
+                  <ng-template matStepLabel>Fill out your address</ng-template>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+                           required>
+                  </mat-form-field>
+                  <div>
+                    <button mat-button matStepperPrevious class="btn-stepper">Back</button>
+                    <button mat-button matStepperNext class="btn-stepper">Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <p>You are now done.</p>
+                <div>
+                  <button mat-button matStepperPrevious class="btn-stepper">Back</button>
+                  <button mat-button (click)="stepper.reset()" class="btn-stepper">Reset</button>
+                </div>
+              </mat-step>
+            </mat-stepper>
+            
+        <!-- End linear stepper --> 
+        </div>
+         
+    </div>
+</div>

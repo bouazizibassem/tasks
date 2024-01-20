@@ -1,0 +1,20 @@
+.fc-dayGrid-event {
+    border-radius: 40px;
+}
+
+
+.fc .fc-daygrid-day.fc-day-today {
+    background-color: rgb(229, 248, 225, 0.5) !important;
+}
+
+
+:root {
+    --fc-border-color: black;
+    --fc-daygrid-event-dot-width: 5px;
+  }
+
+
+  .fc .fc-col-header-cell-cushion {
+    display: inline-block;
+    padding: 2px 4px;
+  }

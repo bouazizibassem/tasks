@@ -1,0 +1,29 @@
+.login-div{
+    .btn-log{   
+    transition: all 0.3s ease-out;    
+    border: 0 !important;
+    background-color: #ccd4e773;
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%; 
+     box-shadow: rgb(223 217 217 / 2%) 0px 1px 3px 0px, rgb(70 89 108 / 15%) 0px 0px 0px 1px;
+    font-family: "Poppins", sans-serif;
+    height: 3rem;
+            .icon-google {
+                width: 2rem;
+                margin-right: 1rem;
+            }
+            h4{
+                padding: 0;
+                margin: 0;
+                color: $PrimaryColor1;
+            }
+    }
+    .btn-log:hover,.btn-log:focus{
+        background-color: #cad6f39c;
+    }
+     
+}

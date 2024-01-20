@@ -1,0 +1,61 @@
+<div class="container-fluid p-0">
+    <div class="row">
+        <div class="container-form">
+            <div class="name-space-main m-auto swing-in-top-fwd-auth ">
+                    <!---->
+                    <div class="mb-4 name-space select-account-div">
+                            <div class="card simple-card">
+                                <div class="card-header">
+                                    <h3>Accounts</h3>
+                                    <p>Select account(s) to login</p>
+                                </div>
+                                <div class="card-body" [ngClass]="{'new-height': DataBoxVisible}">
+                                    <mat-form-field appearance="outline">        
+                                        <mat-select (selectionChange)="accountSelected($event)" panelClass="select-acount"  placeholder="Select Account"  #singleSelect>
+                                            <mat-option>
+                                              <ngx-mat-select-search [(ngModel)]="searchAccount" placeholderLabel="Search account..."  noEntriesFoundLabel="'No account found'"></ngx-mat-select-search>
+                                            </mat-option>
+                                            <mat-option *ngFor="let account of listAccount | filter:searchAccount" [value]="account.accountId" >
+                                                <div class="option d-flex">
+                                                    <div class="avatar" >
+                                                        <img src={{account.imgAccount}} alt="">
+                                                    </div>
+                                                    <div class="account-select-info">
+                                                        <p class="name">Account : &nbsp;
+                                                            <span>{{account.name }}</span>
+                                                        </p>  
+                                                    </div>
+                                                </div>  
+                                            </mat-option> 
+                                        </mat-select>
+                                    </mat-form-field>
+
+                                    <div class="account-box" *ngIf="DataBoxVisible === true">
+                                        <div class="avatar">
+                                            <img src={{imgSpaceName}} alt="">
+                                        </div>
+                                        <div class="name-account">
+                                            <h3>{{spaceName}}</h3>
+                                        </div>
+                                        <div class="email">
+                                            <h4>{{emailSpaceName}}</h4>
+                                        </div>
+                                        <div class="box-btn-Account">
+                                            <button mat-button class="btn-Account gen-btn" routerLink="../choose-domaine" >
+                                                Back
+                                             </button>  
+                                             <button mat-button class="btn-Account gen-btn" >
+                                                 Next
+                                             </button>        
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>                        
+                    </div>
+                    <!---->
+                    
+                </div>
+        </div>
+    </div>
+</div>

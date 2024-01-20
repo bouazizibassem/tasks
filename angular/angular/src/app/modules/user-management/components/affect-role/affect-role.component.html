@@ -1,0 +1,30 @@
+<div class="w-100 title-dialog">
+    <H2>Chnage or add Role</H2>
+    <hr>
+</div>
+
+
+<div mat-dialog-content class="dialog-user">
+    <form>
+        <div class="row mb-1" style="width: 600px;">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mb-xs-3 mb-sm-3">
+               
+                <label for=""> Role</label>
+                <select class="form-control" [(ngModel)]="myrole" name="myrole" aria-label="Default select example">
+                    <option value="admin">Admin</option>
+                    <option value="manager">Manager</option>
+                    <option value="employee">Employee</option>
+                  </select>
+
+            </div>
+
+        
+        </div>
+
+    </form>
+
+    <div class="row dialog-action">
+            <button mat-raised-button class="btn-save btn-dialog-action" (click)="save()" color="primary">Save</button>
+           <button mat-raised-button class="btn-cancel btn-dialog-action" color="warn" mat-dialog-close>Cancel</button>
+    </div>
+</div>

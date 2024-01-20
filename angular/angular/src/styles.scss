@@ -1,0 +1,213 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+/** Colors Tanitlab**/
+$colorBlueTanitlab:#193f77;
+$colorBlueSami:#2066ff;
+$colorRoseTanitlab: #e60060;  
+$colorBlue2 : #1c54a7;
+$colorNoireBlue : #131d2d;
+$colorMoveSami : rgba(63, 81, 181, 0.99);
+$colorMoveSami2 : rgb(204 207 224 / 48%);
+$colorBlanc: #ffffff;
+$colorNoire: #000000;
+$bodyBgColor: #F3F6F9;
+$bodyBgColor2: #edf1f5;
+$coloNavToolbar : #bfbdbd;
+
+$degrade1:  rgb(35,33,37);
+$degrade2:  linear-gradient(90deg, rgba(35,33,37,1) 0%, rgba(10,24,45,1) 100%);
+$notificationColor: #aac0e2;
+
+$pictUser : url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrxCVhWqE4CzUlWmpmIo6k_zO3x0Wsou8hcKh1OPI&s');
+
+
+/** Variable **/
+
+$PrimaryColor1: #467fff; 
+$PrimaryColor2: #cad6f3; 
+$PrimaryColor3: #868686; // Pour icon et border
+$PrimaryColor4: rgb(100, 109, 109); // Pour text liste notif
+
+/*******Navbar && header ********/
+
+$coloChevron: $PrimaryColor1;
+$coloChevron_Hover: $colorRoseTanitlab;
+
+$btnMenuColor: $PrimaryColor1;
+$Bg_btnMenuColor: $PrimaryColor2;
+$btnMenuColor_Hover: $PrimaryColor1;
+$Bg_btnMenuColor_Hover: $PrimaryColor2;
+
+$bg_navbar: $colorBlanc;
+$headerBgColor : $colorBlanc;
+
+$fontPoppins :  'Poppins', sans-serif;
+$fontOswald : 'Oswald', sans-serif;
+
+/***Notification && message***/
+$iconeNotif: $PrimaryColor3;
+$notifColorBulle: $PrimaryColor1;
+$titleNotif: $colorNoire;
+$iconeListeNotif: $PrimaryColor1;
+$titleListeNotif: #3b3a3a;   
+$dateListeNotif: $PrimaryColor3;   
+$textListeNotif: rgb(100, 109, 109);;
+$bgNotif_unread: rgba(202, 214, 243, 0.31);
+/*******Liste User*******/
+$btnActionColor: $PrimaryColor1;
+$btnActionColor_Hover: $PrimaryColor1;
+$bg_btnActionColor_Hover: $PrimaryColor2;
+
+$btn_headerTable: $PrimaryColor1;
+$listeTableColor_Hover: $PrimaryColor1;
+$bg_listeTableColor_Hover : #eeeeee;
+$checbox_listeTableColor: $PrimaryColor1; 
+/*******view User*******/
+$nameUserColor: $PrimaryColor1;
+$titleInfoBoxUserColor: $PrimaryColor1;
+$textInfoBoxUserColor: #556472;
+$titleTasksColor: $PrimaryColor1;
+$bg_footerTasks: $PrimaryColor1;
+$iconeTaskColor: #868686;
+/***Card && Accordion***/
+$iconeCardColor: $PrimaryColor3;
+$titleCardColor: $PrimaryColor3;
+$linkCardColor: $PrimaryColor1;
+$chevronCardColor: $PrimaryColor3;
+$titleChevronCardColor: $PrimaryColor1;
+/********Timeline********/
+$circleColor: hsl(222deg, 100%, 64%);
+$VerticalLineColor: $PrimaryColor2; 
+$borderBoxColor_Timeline: #467fff63;
+$TitleBoxColor_timeline: $PrimaryColor1;
+$dateColor_Timeline: $PrimaryColor1;
+$bg_dateColor_Timeline: rgb(202 214 243 / 63%);
+
+
+
+$dialogFont: $fontPoppins;
+$primaryFontApp: $fontPoppins; 
+
+html, body { height: 100%; }
+body{
+    font-family: $fontPoppins !important;
+    margin: 0;  
+}
+button{
+    border-radius: 0.3rem !important;
+} 
+
+.custom-sidebar{
+     background: $colorBlueTanitlab !important;
+    color: $colorBlanc !important;
+}
+h1, h2, h3, h4, h5, h6, p, pre, span {
+  font-family: var($fontPoppins) !important;
+  
+}
+body{
+  overflow: hidden;
+}
+mat-sidenav-content{
+  overflow: hidden !important;
+  height: calc(100% - 4rem) !important;
+}
+.row{
+  padding: 0;
+  margin: 0;
+}
+main{
+  padding-top: 5rem;
+}
+.navbar-toggler:focus {
+   box-shadow: 0 0 0 0 !important; 
+   }
+
+.div-main{
+  overflow: auto;
+  max-height: 100vh;
+  padding: 0rem 0 3rem 0;
+
+    .content-main{
+      overflow: auto;
+    }
+  
+    .title-page {
+      padding: 1rem 0;
+      width: 100%;
+      margin: 0;
+      border-bottom: 0.01rem solid rgb(198 198 198 / 94%);
+      h2{
+        margin: auto 1rem;
+        font-size: 1rem;
+        color: #868686;
+      }
+
+      .gen-btn-div{
+        margin-right: 1rem;
+        .gen-btn{
+          color: $PrimaryColor1;
+          background-color: $PrimaryColor2;
+          text-align: right;
+          height: 2.5rem;
+          margin: auto 0;
+          font-weight: 500;
+        }
+      }
+      
+  }
+}
+
+
+
+@import './assets/styles/animation.scss';
+@import './assets/styles/name-space.scss';
+@import './assets/styles/btn-css.scss';
+@import './assets/styles/auth.scss';
+@import './assets/styles/sidebar.scss';
+@import './assets/styles/datatable.scss';
+@import './assets/styles/liste-user.scss';
+@import './assets/styles/dialog-user.scss';
+@import './assets/styles/view-user.scss';
+@import './assets/styles/navbar.scss';
+@import './assets/styles/card-and-accordion.scss';
+@import './assets/styles/notification.scss';
+@import './assets/styles/timeline.scss';
+@import './assets/styles/stepper.scss';
+@import './assets/styles/formulaire.scss';
+@import './assets/styles/workflow.scss';
+@import './assets/styles/login-google.scss';
+/**************************************************************/
+/** Scroll Bar **/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #c9c9c9; 
+    border-radius: 0.5rem !important;
+
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #467fff; 
+    border-radius: 0.5rem !important;
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  /************************************************/
+
+  @media only screen and (min-width: 200px) and (max-width: 768px) {
+    main{
+      padding-top: 1rem;
+    }
+  }

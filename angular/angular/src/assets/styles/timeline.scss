@@ -1,0 +1,77 @@
+.timeline {
+  position: relative;
+  list-style: none;
+
+  .timeline-item {
+    position: relative;
+    border: 1px solid $borderBoxColor_Timeline;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+
+      span {
+        font-weight: 500;
+        font-size: 0.7rem;
+        background-color: $bg_dateColor_Timeline;
+        padding: 0.25rem;
+        border-radius: 0.2rem;
+        height: auto;
+        line-height: 2.1;
+        text-align: center;
+        color: $dateColor_Timeline !important;
+      }
+
+      h5 {
+        font-weight: 500;
+        font-size: 1rem;
+        color: $TitleBoxColor_timeline;
+        margin-bottom: 0.4rem;
+      }
+    }
+  }
+
+  .timeline-item:after {
+    position: absolute;
+    display: block;
+    top: 0;
+  }
+
+  .timeline-item:after {
+    background-color: $circleColor;
+    left: -2.4333rem;
+    top: 4px;
+    border-radius: 50%;
+    height: 0.8rem;
+    width: 0.8rem;
+    content: "";
+    z-index: 4;
+  }
+}
+
+.timeline:after {
+  position: absolute;
+  display: block;
+  top: 1%;
+  left: -0.073rem;
+  height: 100%;
+  width: 2px;
+  background-color: $VerticalLineColor;
+  content: "";
+  z-index: 3;
+}
+
+/*****************************************/
+
+@media only screen and (min-width: 200px) and (max-width: 960px) {
+  .timeline { 
+    .timeline-item { 
+    .title {
+        display: block;
+      }
+    }
+}
+}

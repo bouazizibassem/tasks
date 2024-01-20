@@ -1,0 +1,40 @@
+.custom-stepper {
+    .btn-stepper{
+        color: #4780ff !important;
+        background: #cad6f3 !important;
+        margin-right:0.4rem;
+    }
+
+    .mat-step-header {
+        background-color: rgba(0, 0, 0, 0);
+
+         .mat-step-icon, .mat-step-icon:hover {
+             background-color: rgb(160 166 171) !important;
+             color: #fff !important;
+         }
+
+        .mat-step-icon-selected,
+        .mat-step-icon-state-edit,
+        .mat-step-icon-state-done,
+        .mat-step-icon-selected:hover,
+        .mat-step-icon-state-edit:hover,
+        .mat-step-icon-state-done:hover {
+            background-color: #4780ff !important;
+            color: white !important;
+        }
+        
+    }
+
+
+    .mat-step-header :hover {
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+    .mat-step-header.cdk-keyboard-focused,
+    .mat-step-header.cdk-program-focused,
+    .mat-step-header:hover:not([aria-disabled]),
+    .mat-step-header:hover[aria-disabled=false] {
+        background-color: rgba(0, 0, 0, 0) !important;
+    }
+
+}

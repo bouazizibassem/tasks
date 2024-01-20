@@ -1,0 +1,54 @@
+<div class="container-fluid p-0">
+    <div class="row">
+        <div class="container-form">
+            <div class="name-space-main m-auto swing-in-top-fwd-auth ">
+                    <!---->
+                    <div class="creat-account-div">
+                        <div class="text-center mb-4">
+                           <h3 class="title-domane-interface">Creat account</h3>
+                        </div>
+                        <form>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control " id="floatingInput" placeholder="account name..">
+                                <label for="floatingInput">Account name..</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control " id="floatingInput" placeholder="space name..">
+                                <label for="floatingInput">Space name..</label>
+                            </div>
+                            <div class="form-floating  mb-3">
+                                <div class="logo-url">
+                                    <div class="box-file-selected" *ngIf="logoSelected === true">
+                                        <button mat-icon-button class="clear-file-selected" *ngIf="logoSelected === true" (click)="logoSelected = false">
+                                            <mat-icon>clear</mat-icon>
+                                        </button>
+                                        <img  src="../../../../../assets/images/icon/text-document-and-image.jpg" class="file-selected"> 
+                                        <p> You can change logo if you want !</p>
+                                    </div>
+                                    <div class="input-logo" *ngIf="logoSelected === false">
+                                        <input #logoUrl hidden="true" type="file" onclick="this.value=null" (change)="inputFile($event)"   />
+                                        <button mat-icon-button class="other-btn" (click)="logoUrl.click()">
+                                            <mat-icon>image</mat-icon> <span>Select logo</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="box-btn-Account">
+                                <button mat-button class="btn-Account gen-btn" routerLink="../choose-domaine" >
+                                    Cancel
+                                 </button>  
+                                 <button mat-button class="btn-Account gen-btn" >
+                                    Validate
+                                 </button>        
+                            </div>
+                        </form>
+                                   
+                               
+                    </div>
+                    <!---->
+                    
+                </div>
+        </div>
+    </div>
+</div>

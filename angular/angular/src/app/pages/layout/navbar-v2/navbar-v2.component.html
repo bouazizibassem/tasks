@@ -1,0 +1,88 @@
+<header class="p-3 mb-3 border-bottom navbar-version2">
+    <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Eleventh navbar example">
+        <div class="container-fluid">
+          
+            <button class="navbar-toggler btn-menu2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <a class="navbar-brand me-0 px-3 fs-6 slide-in-blurred-top" href="#" [routerLink]="'liste-user'">
+                <img src="../../../../../assets/images/tanitlabailogo.png" class="logo">
+            </a>
+            
+          <div class="collapse navbar-collapse slide-in-blurred-top menu2" id="navbarsExample09">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="'liste-user'" routerLinkActive="active" aria-current="page" >Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="'view-user'" routerLinkActive="active">User</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="'liste-notification'" routerLinkActive="active">Messages</a>
+              </li>
+            </ul>
+            <form role="search">
+              <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            
+          </div>
+
+          <div class="navbar-nav custom-navbar nav2 slide-in-blurred-top">
+            <div class="nav-item text-nowrap nav-header px-0">
+                    <!-- start header notification -->
+                    <app-header-notification></app-header-notification> 
+                    <!-- end header notification -->
+                <!-- profile settings-->
+                <div class="dropdown px-md-3 px-xs-2 px-sm-2 m-auto ">
+                    <a href="#"
+                    class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle slide-in-blurred-top m-auto"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="user-profil-img rounded-5 me-2"></div>     
+                    </a>
+                    <ul
+                    class="dropdown-menu ul-profil dropdown-menu-perso dropdown-menu-light text-small shadow  slide-in-blurred-top" style="inset: none;">
+                    <li>
+                        <div class="li-profil-img">
+                        <img src="../../../../../assets/images/pict-user.jpg" alt="" width="40" height="40"
+                            class="rounded me-2 color-change-2x1"> <br>
+                        Sami Darraji
+                        </div>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a class="dropdown-item" [routerLink]="'view-user'" href="#">
+                        <mat-icon>person</mat-icon>
+                        <span>User Account</span>
+                        </a>
+                    </li>
+                    <li><a class="dropdown-item " href="#">
+                        <mat-icon>settings</mat-icon>
+                        <span>Settings</span>  
+                        </a></li>
+                    <li>
+                        <a class="dropdown-item " href="#">
+                        <mat-icon>logout</mat-icon>
+                        <span>Log Out</span> 
+                        </a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+      </nav>
+
+
+      
+</header>
+
+<div class="container-fluid container-main2">
+    <div class="row">
+      <main class="col-md-12 ">
+        <!-- Add Content Here -->
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>

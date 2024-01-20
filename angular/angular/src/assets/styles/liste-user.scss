@@ -1,0 +1,154 @@
+.header-row-liste-user {
+    .custom-div-input-search {
+        .mat-form-field-appearance-outline .mat-form-field-wrapper {
+            margin: 0;
+        }
+    }
+
+    .custom-div-add-user {
+        float: right;
+        text-align: right;
+        button {
+            height: 3rem;
+            width: 100%;            
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px !important;
+            border-radius: 0.3rem !important;
+            transition: all ease-in 0.3s;
+            color: $colorMoveSami;
+        }
+        button:hover {
+            color: $colorBlanc;
+            background-color: $colorMoveSami;
+            font-size: 1rem;  
+        }
+    }
+}
+
+
+.custom-mat-menu {
+    min-width: 9rem !important;
+    border-radius: 0.5rem;
+
+    
+}
+
+.custom-div-liste-user {
+    padding: 1rem 0 !important;
+    
+    /*** Btn Action in DataTable ***/
+    .btn-icon-manage {
+        height: 2.5rem !important;
+        width: 2.5rem !important;
+        border-radius: 50% !important;
+        margin: 0.2rem !important;
+    
+        mat-icon {
+            color: $btnActionColor;
+    
+        }
+    }
+  
+  
+    .btn-icon-manage:hover {
+        background-color: $bg_btnActionColor_Hover;
+        mat-icon {
+            color: $btnActionColor_Hover;
+            
+        }
+    }
+  
+  .menu-table-user {
+    display: flex;
+    height: 4rem;
+    background: #f5f5f5;;
+    border: 0.01rem solid #e0e0e0;
+    padding:0 0.2rem 0 1rem;
+    color: $btn_headerTable;
+    justify-items: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;  
+   
+    .btn-actiontable{
+        width: 50%;
+        justify-content: end;
+        justify-items: center;
+        margin: auto 0;
+        text-align: right;
+        order: 2;
+        button{
+            text-align: right;
+            height: 2.5rem;
+            margin: auto 0;
+            font-weight: 400;
+            }
+        button:hover{
+            background-color: #ffffff96;
+        }
+    }
+
+    .search-table{
+        width: 50%;
+        display: flex;
+        margin: auto 0;
+        text-align: left;
+        float: left;
+        order: 1;
+        
+        .search-input-table{
+            border-radius: 5rem !important ;
+            width: 60%;
+            transition: all ease-in 0.5s;
+            padding: 0.2rem 1rem 0.2rem 2rem !important;
+            background: url(../images/icon/search.svg) 100% no-repeat #ffffff;
+            background-size: 1rem;
+            background-position: 0.6rem 50%;
+            border: 1px solid #dee2e6 !important;
+            box-shadow:none;
+        }
+        .search-input-table:focus{
+            width: 70%;
+            border: 1px solid #dee2e6 !important;
+            box-shadow:none;
+        }        
+    } 
+  }
+}
+
+.row{
+    padding: 0;
+    margin: 0;
+}
+/*
+.list-user-checkbox{
+    .cdk-visually-hidden {
+    display: none !important;
+    }
+}
+*/
+
+@media only screen and (min-width: 200px) and (max-width: 760px) {
+    .menu-table-user {
+      display: block !important;
+      height: 6.5rem !important;
+      padding: 0rem !important;
+      
+        .btn-actiontable{
+            width: 100% !important;
+            padding: 0.2rem !important; 
+            order: 1 !important;
+            margin: auto !important;          
+        }
+    
+        .search-table{
+            width: 100% !important;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+            order: 2 !important;
+            margin: auto !important;
+
+            .search-input-table{
+                width: 100% !important;
+            }
+        }
+      
+      }
+}

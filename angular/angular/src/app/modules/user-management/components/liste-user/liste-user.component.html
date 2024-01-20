@@ -1,0 +1,62 @@
+<div class="div-main">
+  <div class="title-page">
+    <h2>Liste User</h2>
+
+  </div>
+
+  <div class="row custom-div-liste-user">
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12  user-list-container">
+      <div class="menu-table-user">
+
+        <div class="btn-actiontable">
+
+
+
+
+
+        </div>
+
+        <div class="search-table">
+          <input class="form-control form-control-light  rounded-0 border-0 search-input-table" id="input" type="text"
+            placeholder="Search" aria-label="Search" (keyup)="applyFilter($event)" #input>
+        </div>
+      </div>
+
+
+
+      <div class="example-container">
+        <table class="table">
+          <thead class="table-dark">
+            <tr>
+              <th>Email</th>
+              <th>Username</th>
+
+              <th>Role</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let i of listeData">
+              <th>{{i.email}}</th>
+              <th>{{i.username}}</th>
+              <th>{{i.role}}</th>
+              <th>
+                <button class="btn btn-danger" (click)="openDialogRole(i)">
+                  +Role
+                </button>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-2">
+
+    </div>
+
+  </div>
+</div>

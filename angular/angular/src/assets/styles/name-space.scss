@@ -1,0 +1,328 @@
+
+
+.name-space-main{
+    width: auto;
+    display: flex;
+    padding: 2rem;
+    border-radius: 0.3rem;
+    background: white;
+    box-shadow: rgb(70 127 255 / 20%) 0px 6px 24px 0px, rgb(178 180 186 / 22%) 0px 0px 0px 1px;
+  }
+
+.name-space {
+    width: 100%;
+
+    .simple-card {
+        border: 0;
+        padding: 0;
+
+        .card-header {
+            text-align: center;
+            padding: 0.5rem 0.5rem 2rem;
+
+            h3 {
+                font-weight: 500;
+                color: $PrimaryColor1;
+                font-family: $fontPoppins;
+                margin-bottom: 0.4rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+
+        .card-body {
+            padding: 0%;
+            display: flex;
+            height: 10rem;
+
+            .left-body,
+            .right-body {
+                width: 13.5rem;
+                display: flex;
+            }
+
+            .right-body {
+                border-left: 0.01rem solid $PrimaryColor2;
+            }
+
+            .btn-domaine {
+                margin: auto;
+                padding: 1rem;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 10rem;
+                height: 10rem;
+                border-radius: 50%;
+                font-size: 0.9rem;
+                font-weight: 400;
+                color: white;
+                background-color: $PrimaryColor1;
+                cursor: pointer;
+                transition: all 0.5s ease-out;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+                mat-icon {
+                    margin-bottom: 0.4rem;
+                }
+            }
+
+            .btn-domaine:hover {
+                width: 11rem;
+                height: 11rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+}
+
+.select-account-div,
+.creat-account-div {
+    width: 24rem;
+
+    .mat-form-field-appearance-outline {
+        .mat-form-field-infix {
+            padding: 1em 1em 1.5em 1em;
+        }
+
+        .mat-select-arrow-wrapper {
+            margin-top: 0.4rem;
+        }
+    }
+
+    .simple-card {
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            transition: all 0.5s ease-out;
+
+            .account-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .avatar {
+                    width: 5rem;
+                    height: 5rem;
+                    overflow: hidden;
+                    border-radius: 50%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .name-account {
+                    margin: auto;
+                    h3 {
+                        margin-top: 0.7rem;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 1rem;
+                        color: $PrimaryColor1;
+                        font-weight: 500;
+                    }
+                }
+
+                .email {
+                    margin: auto;
+                    h4 {
+                        margin: 0%;
+                        padding: 0%;
+                        font-weight: 400;
+                        color: #5c5c5c;
+                        font-size: 0.88;
+                    }
+                }
+
+                .box-btn-Account {
+                    .btn-Account {                        
+                        margin: 0 0.3rem;
+                    }
+                }
+            }
+        }
+
+        .card-body.new-height {
+            max-height: 18rem;
+        }
+
+    }
+}
+
+    .select-account-div{
+        .mat-form-field-appearance-outline.mat-focused {
+            .mat-form-field-outline-thick {
+            color: $PrimaryColor1;
+            }
+        }
+    }
+
+.creat-account-div {
+    .logo-url{
+        border: 0.01rem solid #ced4da;
+        border-radius: 0.375rem;
+        min-height: calc(3.5rem + 2px);
+        line-height: 1.25;
+        display: flex;
+        align-items: center;
+    
+        .box-file-selected {
+            position: relative;
+            margin: 0.2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        p{
+            margin: 0;
+            margin-left: 0.5rem ;
+            padding: 0;
+        }
+
+        .clear-file-selected {
+            opacity: 0.8;
+            z-index: 3;
+            position: absolute;
+            width: 4rem !important;
+            height: 4rem !important;
+            border-radius: 50% !important;
+            // background-color: rgb(59 58 58 / 52%);
+            // border: 0.1rem solid #6b99ff;
+
+            mat-icon {
+                color: #ffffff;
+                bottom: 0px;
+                right: 0px;
+                position: absolute;
+                border-radius: 50%;
+                background: $PrimaryColor1;          
+            }
+        }
+
+        .file-selected {
+            position: relative;
+            border-radius: 50%;
+            margin: auto 0;
+            width: 4rem;
+            height: auto;
+            z-index: 2;
+            // background-color: #467fff;
+        }
+    }
+    .input-logo{
+        button{
+            color: $PrimaryColor1;
+            span{
+                margin-left: 0.5rem;
+            }
+        }
+    }
+    }
+    
+    .box-btn-Account {
+        .btn-Account {
+            width: 5.4rem;
+        }
+    }
+    .title-domane-interface{
+        color: #467fff;
+        font-weight: 500 !important;
+        font-size: 1rem !important;
+        padding: 0.3rem 0.6rem;
+        border-bottom: 0.01rem solid;
+    }
+    
+}
+
+.select-acount {
+    mat-option {
+        line-height: 3.3em !important;
+        height: 3.3em !important;
+
+        .avatar {
+            margin: auto 0;
+
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                margin-right: 1rem;
+            }
+        }
+
+        .account-select-info {
+            margin: auto 0;
+            margin-right: 1rem;
+            display: flex;
+
+            p {
+                font-weight: 500;
+                color: $PrimaryColor1;
+                margin: 0;
+                min-width: 8rem;
+
+                span {
+                    color: #5c5c5c;
+                    padding-right: 1rem;
+                }
+            }
+
+            .name {
+                min-width: 12rem;
+            }
+        }
+    }
+}
+
+.box-btn-Account {
+    text-align: center;
+    margin-top: 1.5rem;
+
+    .btn-Account {
+        background: $PrimaryColor2;
+        color: $PrimaryColor1;
+        margin: 0 0.3rem;
+        transition: all 0.5s ease-out;
+    }
+    .btn-Account:hover{
+        background: $PrimaryColor1;
+        color: white;
+    }
+    
+}
+
+@media only screen and (min-width: 200px) and (max-width: 570px) {
+    .name-space-main {
+        width: 95%;
+    }
+
+    .name-space {
+        .simple-card {
+            .card-body {
+                height: auto;
+                flex-direction: column;
+
+                .right-body {
+                    border-left: 0;
+                    margin-top: 1rem;
+                }
+
+                .left-body,
+                .right-body {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,29 @@
+<div class="div-main">
+    <div class="title-page">
+        <h2>Add Team</h2>
+    </div>
+    <div class="row d-flex justify-content-center py-4">
+        <div class="col-12 form-card">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="">Name</label>
+                        <input type="text" [(ngModel)]="team.teamname" class="form-control" name="Teamname" placeholder="Name">
+                    </div>
+                    <!-- <div class="col-md-6">
+                        <label for="">Employee</label>
+                        <mat-form-field>
+                            <mat-select name="users" [(ngModel)]="team.users" placeholder="Choose an option" multiple>
+                                <mat-option *ngFor="let i of allUsers" [value]="i">{{i.username}}</mat-option>
+                              
+                            </mat-select>
+                        </mat-form-field>
+                    </div> -->
+                    <div class="col-md-12" style="margin-top: 12px;">
+                        <button mat-button color="primary" (click)="addTeam()" mat-raised-button>Enregistrer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

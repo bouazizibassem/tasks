@@ -1,0 +1,57 @@
+
+      <!-- notification -->
+      <div class="dropdown px-0  px-xs-2 px-sm-2 notification">
+        <button mat-icon-button
+          class="d-flex align-items-center text-dark text-decoration-none  dropdown-toggle slide-in-blurred-top"
+          data-bs-toggle="dropdown" aria-expanded="false" aria-label="Example icon-button with a menu">
+          <mat-icon matBadge="3" matBadgeSize="small" >notifications</mat-icon>
+        </button>
+        
+        <ul  (click)="$event.stopPropagation()" class="dropdown-menu ul-notification dropdown-menu-perso dropdown-menu-light text-small shadow slide-in-blurred-top" id="dropdown-header">
+          
+          <li class="li-notification">
+            <h4>Notifications </h4>
+             <a class="view-all-notification" [routerLink]="'liste-notification'">View all</a>
+          </li>
+
+          <li class="detail-notif" [ngClass]="{'unread' : msg.vu === false}"  *ngFor="let msg of messageListe.slice(0, numberOfMessage); let i = index">
+            <a class="dropdown-item a-notif-link" [routerLink]="'../liste-notification'" >
+             <div class="row">
+              <div class="col-1 icon-notif">
+                  <mat-icon *ngIf="msg.type === 'message' && msg.vu === false ">mark_email_unread</mat-icon>
+                  <mat-icon *ngIf="msg.type === 'message' && msg.vu === true ">email</mat-icon>
+                  <mat-icon *ngIf="msg.type === 'role'">admin_panel_settings</mat-icon>
+                  <mat-icon *ngIf="msg.type === 'user'">person_add_alt</mat-icon>
+                  <mat-icon *ngIf="msg.type === 'task'">task</mat-icon>
+              </div>
+              <div class="col-11 header-notif">
+                <div class="row">
+                  <div class="col-9 title-notif">{{msg.title}}&nbsp;<span *ngIf="msg.type === 'message'">{{msg.nameSender }}</span></div>
+                  <div class="col-3 date-notif">{{msg.date}}</div>
+                </div>
+                <div class="row">
+                  <div class="col-12 text-notif">
+                    <p>{{msg.text}}</p>
+                  </div>
+                </div>
+              </div>
+             </div>  
+            </a>
+          </li>
+      
+          <li class="detail-notif"  >
+            <a class="dropdown-item a-notif-link" >
+             <div class="row">
+              <div class="col-12 plus-de-message" (click)="plusDeMessages()">
+                  <h4>Plus de Messages</h4>
+              </div>         
+             </div>  
+            </a>
+          </li>
+        </ul>
+        
+      </div>
+
+     
+
+

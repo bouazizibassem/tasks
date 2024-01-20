@@ -1,0 +1,85 @@
+.accordion {
+    border: 1px solid #bababa;
+    border-radius: 0.4rem;
+    z-index: 3;
+}
+
+.card-accordion {
+    border: 0;
+}
+
+.card {
+    .card-header {
+        border-bottom: 0;
+        background: white;
+        border-radius: 0.5rem;
+        z-index: 2;
+        padding: 1rem 1rem;
+
+        span.span-header {
+            margin: auto 0;
+            padding: 0;
+        }
+
+        .card-header-left {
+            padding-left: 0rem !important;
+            margin: auto 0;
+
+            span {
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: $titleCardColor;
+            }
+
+            mat-icon {
+                margin: 0 0.7rem;
+                color: $iconeCardColor;
+            }
+        }
+
+        .card-header-right {
+            padding-right: 0rem !important;
+
+            span {
+                color: $titleChevronCardColor;
+                font-size: 0.75rem;
+            }
+
+            button {
+                mat-icon {
+                    color: $chevronCardColor;
+                }
+            }
+        }
+
+    }
+
+    .card-body {
+        padding: 1.5rem 1rem;
+
+        .indicateurs {
+            span {
+                font-size: 0.8rem;
+            }
+        }
+
+        .card-link {
+            .div-lin {
+                margin: 0.5rem 0 !important;
+
+                a {
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-weight: 600;
+                    color: $linkCardColor;
+                }
+            }
+
+        }
+
+    }
+}
+
+
+
+

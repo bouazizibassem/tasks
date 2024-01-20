@@ -1,0 +1,57 @@
+<div class="container-fluid p-0">
+  <div class="row">
+    <div class="container-form">
+      <main class="form-signin m-auto swing-in-top-fwd-auth">
+        <form>
+          <div class="text-center">
+            <mat-icon class="icon-login">how_to_reg</mat-icon>
+
+            <h1 class="h4 mb-4 fw-normal">Sign Up</h1>
+
+          </div>
+          <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+            {{errorMessage}}
+        </div>
+          <div class="row mb-4">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 div-signup">
+              <div class="form-floating">
+                <input type="text" name="username" [(ngModel)]="registerForm.username" class="form-control floatName" id="floatInput" placeholder="Name">
+                <label for="floatInput">User Name</label>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 div-signup">
+              <div class="form-floating">
+                <input type="email" name="email" [(ngModel)]="registerForm.email" class="form-control floatEmail" id="floatEmail" placeholder="Email">
+                <label for="floatEmail">Email</label>
+              </div>
+            </div>
+         
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 div-signup">
+              <div class="form-floating">
+                <input type="password" name="password" [(ngModel)]="registerForm.password" class="form-control floatPassword" id="floatPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 div-signup" style="margin-top : 0px">
+              <div class="form-floating">
+                <input type="password" [(ngModel)]="repeatPassword" name="repeat" class="form-control floatRepeatPassword" id="floatRepeatPassword"
+                  placeholder="Repeat Password">
+                <label for="floatRepeatPassword">Repeat Password</label>
+              </div>
+            </div>
+          </div>
+
+
+
+          <button class="w-100 btn btn-lg btn-primary btn-submit" type="submit"  (click)="onRegister()">Create Account</button>
+          <div class="link-reset">
+            <p>Already have an account ? <a routerLink="../login"> Sign in </a></p>
+          </div>
+          <!--<p class="mt-4 mb-1 text-muted text-center">&copy; Tanitlab 2022</p>-->
+        </form>
+      </main>
+    </div>
+  </div>
+
+</div>

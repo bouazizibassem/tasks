@@ -1,0 +1,33 @@
+<div class="div-main">
+    <div class="title-page">
+        <h2>Teams</h2>
+    </div>
+    <div class="row d-flex justify-content-center py-4">
+        <div class="col-8 ">
+            <button class="btn btn-primary" *ngIf="me && !me.team" (click)="addTeam()">Add team</button>
+            <div class="example-container" style="margin-top: 20px;">
+                <table class="table" *ngIf="me && me.team">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Name</th>
+                            <th>Nombre des employee</th>
+
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>{{me?.team.teamname}}</th>
+                            <th>{{nb}}</th>
+                            <th>
+                                <button class="btn btn-danger" (click)="affectTeam(me?.team.id)">
+                                    +Affect employee
+                                </button>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
